@@ -1,0 +1,26 @@
+while wait (10) do
+            local plr = game.Players.LocalPlayer
+local Argument = getsenv(plr.Character.Powers.Bomb).VTCcpkghc
+
+local args = {
+    [1] = Argument,
+    [2] = "BombPower6",
+    [3] = "StartCharging",
+    [4] = CFrame.new(0,0,0),
+    [5] = workspace:WaitForChild("Rock"),
+    [7] = "Right"
+}
+
+plr.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+wait(0)
+local args = {
+    [1] = Argument,
+    [2] = "BombPower6",
+    [3] = "StopCharging",
+    [4] = CFrame.new(0,0,0),
+    [5] = workspace:WaitForChild("Rock"),
+    [6] = 0/0
+}
+
+plr.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+end
